@@ -21,7 +21,9 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 """
+from __future__ import print_function
 
+from builtins import object
 import datetime
 _id = datetime.datetime.now().microsecond
 print(("METADATA: id initialized to ", _id))
@@ -49,7 +51,7 @@ def normalize_whitespace(text):
     return re1.sub("", re2.sub(" ", text))
     #return sub("^\s+|\s+$", "", sub("\s+", " ", text))
 
-class Metadata:
+class Metadata(object):
     """Represents the information in the metadata file."""
     def __init__(self):
         self.longdescription = None
