@@ -88,7 +88,7 @@ class PackageView(CommonTreeView):
         menuitems["select_all"] = Gtk.MenuItem(_("Select all"))
         menuitems["select_all"].connect("activate", self.select_all)
 
-        for item in menuitems.values():
+        for item in list(menuitems.values()):
             menu.append(item)
             item.show()
 
@@ -430,7 +430,7 @@ class PackageView(CommonTreeView):
             return
         self.disable_column_sort()
         model.clear()
-        names = utilities.sort(packages.keys())
+        names = utilities.sort(list(packages.keys()))
         path = None
         locate_count = 0
         for name in names:
@@ -496,7 +496,7 @@ class PackageView(CommonTreeView):
             return
         self.disable_column_sort()
         model.clear()
-        names = utilities.sort(packages.keys())
+        names = utilities.sort(list(packages.keys()))
         path = None
         locate_count = 0
         for name in names:

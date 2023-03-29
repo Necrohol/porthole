@@ -24,7 +24,7 @@
 
 import datetime
 _id = datetime.datetime.now().microsecond
-print("CONFIGURATION: id initialized to " + str(_id))
+print(("CONFIGURATION: id initialized to " + str(_id)))
 
 import re
 

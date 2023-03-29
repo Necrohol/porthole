@@ -24,7 +24,7 @@
 
 import datetime
 _id = datetime.datetime.now().microsecond
-print("PROPERTIES: id initialized to ", _id)
+print(("PROPERTIES: id initialized to ", _id))
 
 
 def comp_iuse(iuse):

@@ -141,7 +141,7 @@ class Summary(Gtk.TextView):
         # create popup menu for rmb-click
         menu = Gtk.Menu()
 
-        for item in menuitems.values():
+        for item in list(menuitems.values()):
             menu.append(item)
             item.show()
 
@@ -172,7 +172,7 @@ class Summary(Gtk.TextView):
             mymenuitems[item_name] = myitems
 
             mysubmenu[item_name] = Gtk.Menu()
-            for item in myitems.values():
+            for item in list(myitems.values()):
                 mysubmenu[item_name].append(item)
                 item.show()
             myparentmenuitems[item_name].set_submenu(mysubmenu[item_name])
@@ -186,10 +186,10 @@ class Summary(Gtk.TextView):
         """ Define all markup tags """
         def create(descs):
             table = Gtk.TextTagTable()
-            for name, properties in descs.items():
+            for name, properties in list(descs.items()):
                 tag = Gtk.TextTag.new(name)
                 table.add(tag)
-                for property, value in properties.items():
+                for property, value in list(properties.items()):
                     tag.set_property(property, value)
             return table
 

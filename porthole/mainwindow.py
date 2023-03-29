@@ -24,7 +24,7 @@
 '''
 import datetime
 _id = datetime.datetime.now().microsecond
-print("MAINWINDOW: id initialized to ", _id)
+print(("MAINWINDOW: id initialized to ", _id))
 
 import gi
 gi.require_version("Gtk", "3.0") # make sure we have the right version

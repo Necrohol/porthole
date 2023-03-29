@@ -24,7 +24,7 @@
 
 import datetime
 _id = datetime.datetime.now().microsecond
-print("STERMINAL: id initialized to ", _id)
+print(("STERMINAL: id initialized to ", _id))
 
 import os
 import pty

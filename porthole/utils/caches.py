@@ -149,7 +149,7 @@ def lfu_cache(maxsize=100):
                     # purge least frequently used cache entry
                     if len(cache) > maxsize:
                         for key, _ in nsmallest(maxsize // 10,
-                                            iter(use_count.items()),
+                                            iter(list(use_count.items())),
                                             key=itemgetter(1)):
                             del cache[key], use_count[key]
 

@@ -23,7 +23,7 @@
 
 import datetime
 _id = datetime.datetime.now().microsecond
-print("DBREADER: import id initialized to ", _id)
+print(("DBREADER: import id initialized to ", _id))
 
 import os
 import threading
@@ -49,7 +49,7 @@ class DatabaseReader(threading.Thread):
         threading.Thread.__init__(self)
         self.setDaemon(1)     # quit even if this thread is still running
         self.id = datetime.datetime.now().microsecond
-        print("DBREADER: DatabaseReader.id initialized to ", self.id)
+        print(("DBREADER: DatabaseReader.id initialized to ", self.id))
         self.db = DBBase()        # the database
         self.callback = callback
         self.done = False     # false if the thread is still working
